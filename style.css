@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+  }
+  
+html{
+    margin: 0;
+    
+height: 100%;
+border: 12px double pink;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #252525;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #252525;
+    
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   margin-top: 25px;
+   margin-left: 25px;
+   margin-right: 25px;
+    background-color: pink;
+
+    border: 12px double #252525;
+}
+.headline h1{
+    margin: 0;
+}
+.headline p{
+    margin: 0;
+}
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    
+    
+}
+
+.scoreboard h3{
+    background-color: pink;
+    font-size: 30px;
+    width: 200px;
+}
+
+.com,.player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.player-name {
+    text-align: center;
+    border-radius: 15px;
+}
+.com-name{
+    text-align: center;
+    border-radius: 15px;
+}
+
+#player-score,#com-score {
+    text-align: center;
+    width: 100px;
+}
+
+.btns{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+   
+}
+
+button {
+    height: 100px;
+    width: 200px;
+    border: 5px solid pink;
+    background-color: #252525;
+    color: pink;
+    font-size: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+    border: 5px solid #252525;
+    background-color: pink;
+    color: #252525;
+    
+    font-weight: bold;
+}
+
+.quotes {
+    display: flex;
+    justify-content: center;
+    color: pink;
+    margin-top: 100px;
+    font-size: 26px;
+    
+   
+   
+}
+.quote {
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   text-align: center;
+  width: 600px;
+  height: 150px;
+  border: 8px double pink;
+
+}
+
+footer{
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    
+    
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+footer p {
+    font-size: 14px;
+    height: 10px;
+}
