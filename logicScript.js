@@ -47,18 +47,7 @@ function playRound(player,com){
 
 function game(){
 
-for(let i = 0; i < 5; i++){
-    playRound(prompt().toLowerCase(),getComputerChoice())
-    console.log("Player " + playerScore + " - " + comScore + " Com")
-}
 
-if(playerScore > comScore){
-    return "player won the game!"
-} else if(playerScore == comScore){
-    return "no winner!"
-} else {
-    return "com won the game!"
-}
 }
 
 console.log(game());
