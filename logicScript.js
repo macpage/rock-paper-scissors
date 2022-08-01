@@ -42,18 +42,45 @@ function playRound(player,com){
  
 }
 
-
-
-
-function game(){
+   const modal = document.querySelector(".model")
+   const winnerText = document.querySelector(".winner-text");
+   const emj = document.querySelector(".emoji");
 
   const pScore = document.querySelector("#player-score");
   const cScore = document.querySelector("#com-score");
+function game(){
+
+
    pScore.innerHTML = playerScore;
    cScore.innerHTML = comScore;;
    cChoice.innerHTML = '"'+comChoice+'!"';
     let rnd = Math.floor(Math.random()*24)
    quote.innerHTML = quotes[rnd];
+
+   
+   pChoice.classList.remove('animate');
+   setTimeout(() => {
+     pChoice.classList.add('animate');
+   }, 0);
+
+   cChoice.classList.remove('animate');
+   setTimeout(() => {
+     cChoice.classList.add('animate');
+   }, 0);
+   
+
+
+
+   if(playerScore == 5){
+       modal.style.display = "block";
+    winnerText.textContent = "Super Sweet You Won!"; 
+    emj.textContent = "<3"
+   } else if (comScore == 5) {
+    modal.style.display = "block";
+    winnerText.textContent = "Damn You Lost Baby..."; 
+    emj.textContent = ":("
+   }
+    
 }
 
 let pChoice = document.querySelector(".pChoice");
@@ -64,7 +91,8 @@ btns.children[0].addEventListener("click", () => {
     
     playRound(btns.children[0].innerHTML.toLowerCase(),getComputerChoice().toLowerCase());
     game();
-    pChoice.innerHTML = '"Rock!"';
+         pChoice.innerHTML = '"Rock!"';
+   
 });
 btns.children[1].addEventListener("click", () => {
     
@@ -80,6 +108,18 @@ btns.children[2].addEventListener("click", () => {
 });
 
 
+let restart = document.querySelector(".play-button");
+
+restart.addEventListener("click", () => {
+    modal.style.display = "none";
+    playerScore= 0;
+    comScore = 0;
+    pScore.innerHTML = playerScore;
+    cScore.innerHTML = comScore;
+    pChoice.innerHTML = '" . . . "';
+    cChoice.innerHTML = '" . . . "';
+    quote.textContent = '"Blackpink in Your Area!"';
+});
 
 
 let quote = document.querySelector(".quote");
