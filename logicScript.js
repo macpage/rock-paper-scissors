@@ -51,7 +51,9 @@ function game(){
   const cScore = document.querySelector("#com-score");
    pScore.innerHTML = playerScore;
    cScore.innerHTML = comScore;;
-   cChoice.innerHTML = '"'+comChoice+'"';
+   cChoice.innerHTML = '"'+comChoice+'!"';
+    let rnd = Math.floor(Math.random()*24)
+   quote.innerHTML = quotes[rnd];
 }
 
 let pChoice = document.querySelector(".pChoice");
@@ -80,7 +82,36 @@ btns.children[2].addEventListener("click", () => {
 
 
 
+let quote = document.querySelector(".quote");
+
+let quotes = [
+    '"If you wanna fix me, then let\'s break up here and now."',
+    '"I don\'t need a Ken."',
+    '"Chillin like a villain."',
+    '"Bring out your boss bish."',
+    '"My life\'s been magic."',
+    '"One of a kind."',
+    '"We ride or die."',
+    '"Being the greatest of all time ain\'t fantasy."',
+    '"When the bass drop, it\'s another banger."',
+    '"I don\'t know what to do without you."',
+    '"Nineties\' baby, I pump up the jam."',
+    '"Never needed nothin\' else, just a lil\' love from myself."',
+    '"You\'re sittin\' on your feelings, I\'m sittin\' on my throne."',
+    '"Look up in the sky, it\'s a bird, it\'s a plane."',
+    '"Tired of hearin\' sorry."',
+    '"This don\'t feel like home."',
+    '"A prince not even on my list."',
+    '"This beat got me feelin\' like."',
+    '"Aye but I don\'t play with them fakes, keep it real with me."',
+    '"Girls wanna have some fun."',
+    '"It\'s the end of the month and the weekend."',
+    '"Only thing I think about is big stacks."',
+    '"I went crazy over you."',
+    '"You\'ll never know unless you walk in my shoes."'
 
 
+    
 
 
+];
