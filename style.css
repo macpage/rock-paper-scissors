@@ -33,6 +33,7 @@ body {
     background-color: pink;
 
     border: 12px double #252525;
+    animation: fadeIn 4s;
 }
 .headline h1{
     margin: 0;
@@ -44,8 +45,9 @@ body {
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
-    
-    
+    gap: 500px;
+   
+    animation: fadeIn 4s;
 }
 
 .scoreboard h3{
@@ -54,13 +56,7 @@ body {
     width: 200px;
 }
 
-.scoreboard h2{
-    
-    color: pink;
-    width: 200px;
-    text-align: center;
-    margin-top: 100px;
-}
+
 
 .com,.player{
     display: flex;
@@ -82,7 +78,49 @@ body {
 #player-score,#com-score {
     text-align: center;
     width: 100px;
+   
 }
+
+.content{
+    display: flex;
+    position: absolute;
+   justify-content: center;
+   color: pink;
+    justify-content: space-evenly;
+   margin-top: 100px;
+   text-align: center;
+  
+  
+  gap: 200px;
+}
+
+.pChoice{
+   width: 200px;
+  
+}
+
+.cChoice{
+    width: 200px;
+    animation: move 1s;
+}
+
+.animate{
+    animation: slide-up 1s;
+    
+}
+
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes move {
+    from { margin-left: 100px; }
+    to { margin-left: 0px; }
+  }
+
 
 .btns{
     margin-top: 100px;
@@ -99,6 +137,7 @@ button {
     background-color: #252525;
     color: pink;
     font-size: 20px;
+    animation: fadeIn 4s;
 }
 
 button:hover {
@@ -129,7 +168,22 @@ button:hover {
   height: 150px;
   border: 8px double pink;
   padding: 10px;
+  animation: 2s slide-up;
+}
 
+
+@keyframes slide-up {
+    from {
+      margin-top: 150px;
+      height: 0px;
+    }
+}
+
+@keyframes slide-down {
+    from {
+      margin-bottom: -150px;
+      height: 0px;
+    }
 }
 
 footer{
@@ -142,8 +196,54 @@ footer{
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 15px;
+    animation: fadeIn 4s;
 }
 footer p {
     font-size: 14px;
     height: 10px;
+}
+
+.model{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation: slide-up 1s;
+}
+
+/* Modal Content/Box */
+.model-content {
+    display: flex;
+    flex-direction: column;
+    
+   align-items: center;
+    background-color: #252525;
+    
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 12px double pink;
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 50%;
+    color: pink;
+    text-align: center;
+    
+  }
+
+  .winner-text{
+    background-color: pink;
+    color: #252525;
+    border-radius: 40px;
+    width: fit-content;
+    padding: 20px;
+    text-align: center;
+  }
+
+.model-content button{
+    margin-top: 50px;
 }
